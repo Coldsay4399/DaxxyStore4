@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaxxyStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DaxxyStore</h1>
+        <nav>
+            <button id="view-cart-btn">Lihat Keranjang</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="products-container">
+            <!-- Daftar Produk -->
+            <div class="product-card" data-id="1">
+                <h3>Panel Public 1GB</h3>
+                <p>Harga: Rp 1.000</p>
+                <button class="add-to-cart" data-name="Panel Public 1GB" data-price="1000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="2">
+                <h3>Panel Public 2GB</h3>
+                <p>Harga: Rp 2.000</p>
+                <button class="add-to-cart" data-name="Panel Public 2GB" data-price="2000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="3">
+                <h3>Panel Public 3GB</h3>
+                <p>Harga: Rp 3.000</p>
+                <button class="add-to-cart" data-name="Panel Public 3GB" data-price="3000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="4">
+                <h3>Panel Public 4GB</h3>
+                <p>Harga: Rp 4.000</p>
+                <button class="add-to-cart" data-name="Panel Public 4GB" data-price="4000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="5">
+                <h3>Panel Public 5GB</h3>
+                <p>Harga: Rp 5.000</p>
+                <button class="add-to-cart" data-name="Panel Public 5GB" data-price="5000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="6">
+                <h3>Panel Public Unli</h3>
+                <p>Harga: Rp 6.000</p>
+                <button class="add-to-cart" data-name="Panel Public Unli" data-price="6000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="7">
+                <h3>Admin Panel Public</h3>
+                <p>Harga: Rp 8.000</p>
+                <button class="add-to-cart" data-name="Admin Panel Public" data-price="8000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="8">
+                <h3>Reseller Panel Public</h3>
+                <p>Harga: Rp 10.000</p>
+                <button class="add-to-cart" data-name="Reseller Panel Public" data-price="10000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="9">
+                <h3>Panel Private 5GB</h3>
+                <p>Harga: Rp 5.000</p>
+                <button class="add-to-cart" data-name="Panel Private 5GB" data-price="5000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="10">
+                <h3>Panel Unli Private</h3>
+                <p>Harga: Rp 6.000</p>
+                <button class="add-to-cart" data-name="Panel Unli Private" data-price="6000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="11">
+                <h3>Reseller Panel Private</h3>
+                <p>Harga: Rp 11.000</p>
+                <button class="add-to-cart" data-name="Reseller Panel Private" data-price="11000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="12">
+                <h3>Jasa Install Panel</h3>
+                <p>Harga: Rp 6.000</p>
+                <button class="add-to-cart" data-name="Jasa Install Panel" data-price="6000">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card" data-id="13">
+                <h3>Jasa Pasang Thema Enigma</h3>
+                <p>Harga: Rp 5.000</p>
+                <button class="add-to-cart" data-name="Jasa Pasang Thema Enigma" data-price="5000">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Keranjang Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: Rp <span id="total-price">0</span></p>
+            <button id="checkout-btn">Checkout</button>
+            <button id="close-cart-btn">Tutup</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
