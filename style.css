@@ -1,92 +1,210 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
+/* Reset dasar */
+body, h1, h2, h3, p, ul, li, button {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.banner {
-    background-color: #1f1f1f;
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1120; /* Warna tema gelap */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
     text-align: center;
-    padding: 20px 0;
+    background-color: #16213e; /* Warna header */
+    padding: 20px 10px;
 }
 
-.banner h1 {
-    color: #ff8c00;
-    font-size: 32px;
-    margin: 0;
+header .banner h1 {
+    font-size: 36px;
+    color: #f39c12; /* Warna mencolok untuk nama toko */
+    text-shadow: 2px 2px 4px #000;
+}
+
+header .banner p {
+    font-size: 18px;
+    color: #cccccc;
 }
 
 .menu {
     display: flex;
     justify-content: center;
-    background-color: #1f1f1f;
-    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #1b2735;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .menu-item {
-    color: #ff8c00;
-    background: none;
-    border: 1px solid #ff8c00;
+    background-color: #f39c12;
+    color: #000;
+    border: none;
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .menu-item:hover {
-    background-color: #ff8c00;
-    color: #121212;
+    background-color: #d35400;
 }
 
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+/* Gaya konten utama */
+main {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 20px;
+}
+
+.cart {
+    width: 25%;
+    background-color: #1b2735;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cart h2 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+#cart-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#cart-list li {
+    margin: 10px 0;
+    background-color: #16213e;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-list li button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#cart-list li button:hover {
+    background-color: #c0392b;
+}
+
+#total-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#checkout {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+#checkout:hover {
+    background-color: #27ae60;
+}
+
+/* Daftar produk */
+.product-list {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-category h2 {
+    margin-bottom: 10px;
+    color: #f39c12;
+    text-align: center;
 }
 
 .product-card {
-    background-color: #1f1f1f;
+    background-color: #16213e;
+    width: calc(33.333% - 20px);
+    padding: 20px;
     border-radius: 10px;
-    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-}
-
-.product-card img {
-    max-width: 100%;
-    border-radius: 5px;
 }
 
 .product-card h3 {
-    margin: 10px 0;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .product-card p {
-    margin: 5px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-.product-card .add-to-cart {
-    padding: 10px 20px;
-    background-color: #ff8c00;
+.product-card button {
+    background-color: #3498db;
+    color: #fff;
     border: none;
-    color: #121212;
-    border-radius: 5px;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.product-card .add-to-cart:hover {
-    background-color: #cc7000;
+.product-card button:hover {
+    background-color: #2980b9;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #1f1f1f;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #1b2735;
+    padding: 10px;
+    margin-top: 20px;
+    color: #cccccc;
+    font-size: 14px;
 }
+
+/* Responsif */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .cart, .product-list {
+        width: 100%;
+    }
+
+    .product-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+    }
