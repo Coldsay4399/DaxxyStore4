@@ -9,7 +9,8 @@
 <body>
     <header>
         <div class="banner">
-            <h1>WELCOME TO DAXXYSTORE</h1>
+            <h1>DaxxyStore</h1>
+            <p>Toko Panel & Jasa Terbaik</p>
         </div>
         <nav class="menu">
             <button class="menu-item" data-category="public">Panel Public</button>
@@ -19,59 +20,106 @@
     </header>
 
     <main>
+        <!-- Keranjang -->
+        <section class="cart">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-list">
+                <!-- Barang yang ditambahkan ke keranjang akan muncul di sini -->
+            </ul>
+            <p id="total-price">Total: Rp 0</p>
+            <button id="checkout">Kirim Pesanan</button>
+        </section>
+
+        <!-- Daftar Produk -->
         <section class="product-list">
             <!-- Panel Public -->
             <div class="product-category" id="public">
                 <h2>Panel Public</h2>
                 <div class="product-card">
-                    <img src="img/public1gb.jpg" alt="Panel Public 1GB">
                     <h3>Panel Public 1GB</h3>
                     <p>Harga: Rp 1.000</p>
-                    <button class="add-to-cart" data-name="Panel Public 1GB" data-price="1000">Tambah ke Keranjang</button>
+                    <button class="add-to-cart" data-name="Panel Public 1GB" data-price="1000">Tambah</button>
                 </div>
                 <div class="product-card">
-                    <img src="img/public2gb.jpg" alt="Panel Public 2GB">
                     <h3>Panel Public 2GB</h3>
                     <p>Harga: Rp 2.000</p>
-                    <button class="add-to-cart" data-name="Panel Public 2GB" data-price="2000">Tambah ke Keranjang</button>
+                    <button class="add-to-cart" data-name="Panel Public 2GB" data-price="2000">Tambah</button>
                 </div>
-                <!-- Tambahkan produk Public lainnya -->
+                <div class="product-card">
+                    <h3>Panel Public 3GB</h3>
+                    <p>Harga: Rp 3.000</p>
+                    <button class="add-to-cart" data-name="Panel Public 3GB" data-price="3000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Public 4GB</h3>
+                    <p>Harga: Rp 4.000</p>
+                    <button class="add-to-cart" data-name="Panel Public 4GB" data-price="4000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Public 5GB</h3>
+                    <p>Harga: Rp 5.000</p>
+                    <button class="add-to-cart" data-name="Panel Public 5GB" data-price="5000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Public 6GB</h3>
+                    <p>Harga: Rp 6.000</p>
+                    <button class="add-to-cart" data-name="Panel Public 6GB" data-price="6000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Public Unli</h3>
+                    <p>Harga: Rp 8.000</p>
+                    <button class="add-to-cart" data-name="Panel Public Unli" data-price="8000">Tambah</button>
+                </div>
             </div>
 
             <!-- Panel Private -->
-            <div class="product-category" id="private" style="display:none;">
+            <div class="product-category" id="private" style="display: none;">
                 <h2>Panel Private</h2>
                 <div class="product-card">
-                    <img src="img/private1gb.jpg" alt="Panel Private 1GB">
                     <h3>Panel Private 1GB</h3>
                     <p>Harga: Rp 2.000</p>
-                    <button class="add-to-cart" data-name="Panel Private 1GB" data-price="2000">Tambah ke Keranjang</button>
+                    <button class="add-to-cart" data-name="Panel Private 1GB" data-price="2000">Tambah</button>
                 </div>
                 <div class="product-card">
-                    <img src="img/private2gb.jpg" alt="Panel Private 2GB">
                     <h3>Panel Private 2GB</h3>
                     <p>Harga: Rp 3.000</p>
-                    <button class="add-to-cart" data-name="Panel Private 2GB" data-price="3000">Tambah ke Keranjang</button>
+                    <button class="add-to-cart" data-name="Panel Private 2GB" data-price="3000">Tambah</button>
                 </div>
-                <!-- Tambahkan produk Private lainnya -->
+                <div class="product-card">
+                    <h3>Panel Private 3GB</h3>
+                    <p>Harga: Rp 4.000</p>
+                    <button class="add-to-cart" data-name="Panel Private 3GB" data-price="4000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Private 4GB</h3>
+                    <p>Harga: Rp 5.000</p>
+                    <button class="add-to-cart" data-name="Panel Private 4GB" data-price="5000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Private 5GB</h3>
+                    <p>Harga: Rp 6.000</p>
+                    <button class="add-to-cart" data-name="Panel Private 5GB" data-price="6000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <h3>Panel Private Unli</h3>
+                    <p>Harga: Rp 10.000</p>
+                    <button class="add-to-cart" data-name="Panel Private Unli" data-price="10000">Tambah</button>
+                </div>
             </div>
 
             <!-- Jasa -->
-            <div class="product-category" id="jasa" style="display:none;">
+            <div class="product-category" id="jasa" style="display: none;">
                 <h2>Jasa</h2>
                 <div class="product-card">
-                    <img src="img/install.jpg" alt="Jasa Install Panel">
                     <h3>Jasa Install Panel</h3>
                     <p>Harga: Rp 6.000</p>
-                    <button class="add-to-cart" data-name="Jasa Install Panel" data-price="6000">Tambah ke Keranjang</button>
+                    <button class="add-to-cart" data-name="Jasa Install Panel" data-price="6000">Tambah</button>
                 </div>
                 <div class="product-card">
-                    <img src="img/enigma.jpg" alt="Pasang Tema Enigma">
                     <h3>Pasang Tema Enigma</h3>
                     <p>Harga: Rp 5.000</p>
-                    <button class="add-to-cart" data-name="Pasang Tema Enigma" data-price="5000">Tambah ke Keranjang</button>
+                    <button class="add-to-cart" data-name="Pasang Tema Enigma" data-price="5000">Tambah</button>
                 </div>
-                <!-- Tambahkan produk Jasa lainnya -->
             </div>
         </section>
     </main>
@@ -81,4 +129,4 @@
     </footer>
     <script src="script.js"></script>
 </body>
-    </html>
+                        </html>
